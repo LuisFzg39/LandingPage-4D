@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import ValorantTitle from '../../assets/Valorant-title.svg'
+import { initHeroButtonHover, initHeroScrollTimeline } from '../../animations/heroAnimations'
 import './Hero.css'
 
 const Hero = () => {
@@ -123,6 +124,7 @@ const Hero = () => {
           alt="Valorant"
           id="hero-heading"
           className="hero__title"
+          ref={titleRef}
         />
         <button ref={buttonRef} className="hero__cta" type="button">
           <span>Play now</span>

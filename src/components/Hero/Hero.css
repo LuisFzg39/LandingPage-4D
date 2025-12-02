@@ -4,13 +4,24 @@
   min-height: 720px;
   padding: 160px 16px 100px;
   background-color: #050505;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
   background-image: url('../../assets/Hero-banner.svg');
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
+  transform: scale(1.65);
+  transform-origin: 50% 12%;
+  will-change: transform;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .hero::after {
@@ -19,6 +30,7 @@
   inset: 0;
   background: linear-gradient(180deg, rgba(5, 5, 5, 0) 60%, rgba(5, 5, 5, 0.65) 100%);
   pointer-events: none;
+  z-index: 0;
 }
 
 .hero__inner {
@@ -29,6 +41,7 @@
   align-items: center;
   gap: 48px;
   z-index: 1;
+  will-change: transform;
 }
 
 .hero__title {
